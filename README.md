@@ -29,3 +29,14 @@ It would be nice to bind the application to B3's futures index, so that prices g
 
 I also intend on hosting this online somehow, so my father-in-law can access it whenever he wants. The website has to be simple by nature, since internet connections in the countryside aren't great (HSDPA, tops).
 
+# Secondary Goals
+
+I've created this section for smaller, but important projects that may appear. 
+
+I was talking to my father-in-law about fuel costs and alternatives to diesel, which is skyrocketing worldwide. He told me he has interest in installing solar power systems and replacing his diesel operated irrigation system with a electricity powered one, which would be very expensive at first, but given the current fuel prices, would pay for itself soon enough.
+
+This smaller, yet very important task, comprises calculating: 
+
+- Monthly amount of power needed to mantain the new system.
+- The costs of switching from diesel to electricity.
+- If installing a solar power system is worth the investment.
