@@ -48,13 +48,14 @@ def custo_energia():
         while True:
             print("Qual é a bandeira de consumo de energia na região do sítio?")
             escolha_bandeira_atual = input(">: ")
-
             if escolha_bandeira_atual in bandeiras:
+                print(f"Atualmente estamos em {escolha_bandeira_atual}")
+                for bandeira, preco in bandeiras[escolha_bandeira_atual]:
+                    valor_bandeira = preco
+                    print(valor_bandeira)
+                    
                 global bandeira_atual
                 bandeira_atual = bandeiras[escolha_bandeira_atual]
-                print(bandeira_atual)
-                global custo_kwh
-                custo_kwh = val
                 preco_eel()
             else:
                 print("Certifique-se que você digitou a bandeira corretamente.\n")
