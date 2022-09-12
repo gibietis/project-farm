@@ -51,12 +51,18 @@ def custo_energia():
 
             if escolha_bandeira_atual in bandeiras:
                 print(f"Atualmente estamos em {escolha_bandeira_atual}")
+                #I can't get this to work properly.
+                #I need a way to transform the value of the key to a variable, so I can multiply it.
+                #There are easier ways to do this, but I don't find them clean enough.
 
-                for k, v in bandeiras[escolha_bandeira_atual]:
-                    print(v)
+                #It is assigining the key to a function, but not the key I want to.
+                for key in bandeiras:
+                    value = bandeiras[key]
+                    global custo_kwh
+                    global bandeira_atual
+                    custo_kwh = float(value)
+                    bandeira_atual = key
                 
-                global bandeira_atual
-                bandeira_atual = bandeiras[escolha_bandeira_atual]
                 preco_eel()
 
             else:
@@ -66,8 +72,7 @@ def custo_energia():
 
 def preco_eel():
     total_eel = (custo_kwh * total_kwh)
-    print(f"""O valor do consumo mensal de energia elétrica, ao utilizar um motor elétrico de 45kW por {horas_uso} horas é de 
-    R$ {total_eel}, considerando o valor de R$ {custo_kwh} por kWh, em período de {bandeira_atual}. \n""")
+    print(f"""O valor do consumo mensal de energia elétrica, ao utilizar um motor elétrico de 45kW por {horas_uso} horas é de R$ {total_eel}, considerando o valor de R$ {custo_kwh} por kWh, em período de {bandeira_atual}. \n""")
     custo_diesel()
 
 def custo_diesel():
@@ -79,8 +84,7 @@ def custo_diesel():
     diesel_total = (consumo_hora * horas_uso)
 
     #format(valor_diesel, '.2f') -> dar um jeito de formatar isso
-    print(f"""O valor mensal gasto atualmente em diesel é de aproximadamente R$ {valor_diesel}, considerando um valor de R$ 
-    {preco_diesel} por litro, com {horas_uso} horas de uso, incorrendo no consumo de {diesel_total} litros de diesel. \n""")
+    print(f"""O valor mensal gasto atualmente em diesel é de aproximadamente R$ {valor_diesel}, considerando um valor de R$ {preco_diesel} por litro, com {horas_uso} horas de uso, incorrendo no consumo de {diesel_total} litros de diesel. \n""")
 
 
     
