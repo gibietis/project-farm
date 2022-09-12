@@ -32,11 +32,11 @@ def potencia_kwh():
 def custo_energia():
 
     bandeiras = {
-        "Bandeira Verde" : 0.19829,
-        "Bandeira Amarela" : 0.22818,
-        "Bandeira Vermelha 1" : 0.26329,
-        "Bandeira Vermelha 2" : 0.29624,
-        "Bandeira Escassez" : 0.34029
+        "Bandeira Verde" : "0.19829",
+        "Bandeira Amarela" : "0.22818",
+        "Bandeira Vermelha 1" : "0.26329",
+        "Bandeira Vermelha 2" : "0.29624",
+        "Bandeira Escassez" : "0.34029"
     }
 
     print("As bandeiras de consumo de eletricidade são: \n")
@@ -48,15 +48,17 @@ def custo_energia():
         while True:
             print("Qual é a bandeira de consumo de energia na região do sítio?")
             escolha_bandeira_atual = input(">: ")
+
             if escolha_bandeira_atual in bandeiras:
                 print(f"Atualmente estamos em {escolha_bandeira_atual}")
-                for bandeira, preco in bandeiras[escolha_bandeira_atual]:
-                    valor_bandeira = preco
-                    print(valor_bandeira)
-                    
+
+                for k, v in bandeiras[escolha_bandeira_atual]:
+                    print(v)
+                
                 global bandeira_atual
                 bandeira_atual = bandeiras[escolha_bandeira_atual]
                 preco_eel()
+
             else:
                 print("Certifique-se que você digitou a bandeira corretamente.\n")
     
@@ -74,8 +76,11 @@ def custo_diesel():
     preco_diesel_conv = float(preco_diesel.replace(',', '.'))
     consumo_hora = 13
     valor_diesel = (preco_diesel_conv * consumo_hora * horas_uso)
-    format(valor_diesel, '.2f')
-    print(f"O valor mensal gasto atualmente em diesel é de aproximadamente R$ {valor_diesel}, considerando um valor de R$ {preco_diesel} por litro, com {horas_uso} horas de uso.\n")
+    diesel_total = (consumo_hora * horas_uso)
+
+    #format(valor_diesel, '.2f') -> dar um jeito de formatar isso
+    print(f"""O valor mensal gasto atualmente em diesel é de aproximadamente R$ {valor_diesel}, considerando um valor de R$ 
+    {preco_diesel} por litro, com {horas_uso} horas de uso, incorrendo no consumo de {diesel_total} litros de diesel. \n""")
 
 
     
