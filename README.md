@@ -1,3 +1,13 @@
+# Electricity Costs Calculator
+
+After a a short period of learning how to code, I've completed the first (and most needed) part of this project: a calculator do find out the costs involved in moving from an old diesel engine to a brand new electric one, given the global skyrocketing in fuel prices.
+
+This calculator inteds to show the current costs, while using the diesel system, the future costs, while relying on electricity, and the costs for switching systems. Things went well and the calculator is up and running.
+
+I wish to make the code cleaner and more concise, but I'm actually very happy with the current result.
+
+You can check out the calculator in this repository.
+
 # Overview
 
 The goal of this project is to create an effective solution to a real-world problem. My father-in-law is a small farmer in the countryside. He works by himself most of the time, without much technological improvement to his work.
@@ -31,12 +41,4 @@ I also intend on hosting this online somehow, so my father-in-law can access it 
 
 # Secondary Goals
 
-I've created this section for smaller, but important projects that may appear. 
-
-I was talking to my father-in-law about fuel costs and alternatives to diesel, which is skyrocketing worldwide. He told me he has interest in installing solar power systems and replacing his diesel operated irrigation system with a electricity powered one, which would be very expensive at first, but given the current fuel prices, would pay for itself soon enough.
-
-This smaller, yet very important task, comprises calculating: 
-
-- Monthly amount of power needed to mantain the new system.
-- The costs of switching from diesel to electricity.
-- If installing a solar power system is worth the investment.
+- Calculator to find out the costs of replacing the old diesel powered pump with an electricity powered pump - DONE!
