@@ -1,20 +1,3 @@
-#Okay, so the irrigation system works with a diesel powedered pump, which takes water from the reservoir and delivers it to the plantation.
-#This engine outputs 60cv, or about 45kW, while consuming 12 to 13 liters of diesel fuel each hour.
-#The pump operates about 25 hours each week, split between 2-3 days.
-
-#Variables I'll be using
-#diesel consumption and price
-#electricity consumption and price
-#switching price (that includes new posts, cables, transformers and a new engine)
-#solar energy setup price
-
-#diesel price per liter, BRL
-
-#energy price R$ kWh - special rural category for nighttime irrigation.
-#okay, so 60cv (about 60hp) equals 44129,9 watts.
-#The kWh formula is w x hours of use x days / 1000.
-#That means 44129,9 x 8 x 12 / 1000, so 4412.99kWh. 
-
 import sys
 
 def horas_trabalho():
@@ -98,7 +81,6 @@ def custo_diesel():
     valor_mensal_diesel_f = "{:.2f}".format(valor_mensal_diesel)
     consumo_diesel_total = (consumo_hora * horas_uso_motor)
 
-    #format(valor_diesel, '.2f') -> dar um jeito de formatar isso
     print(f"Legal! O valor mensal gasto atualmente em diesel é de aproximadamente R$ {valor_mensal_diesel}, considerando um valor de R$ {preco_diesel} por litro, com {horas_uso_motor} horas de uso, incorrendo no consumo de {consumo_diesel_total} litros de diesel.")
     print ("\n", "-" * 20, "\n")
     print("Calculados os custos com diesel e energia elétrica, podemos partir para as despesas com a conversão do sistema.")
