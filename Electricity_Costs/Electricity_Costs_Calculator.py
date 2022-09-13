@@ -59,9 +59,7 @@ def preco_eel():
     global total_eel_f
     total_eel_f = "{:.2f}".format(total_eel)
 
-
     print(f"Isso significa que o valor do consumo mensal de energia elétrica, ao utilizar um motor elétrico de 45kW por {horas_uso_motor} horas é de R$ {total_eel_f}, considerando o valor de R$ {custo_kwh} por kWh, em período de {escolha_bandeira_atual}. \n")
-
     print(f"Òtimo! Agora que sabemos os custos da energia elétrica, precisamos dar uma olhada no diesel. \n")
     print ("\n", "-" * 20, "\n")
 
@@ -111,23 +109,16 @@ def custos_totais():
     adicionais_preco_c = float(adicionais_preco.replace(',', '.'))
 
     print ("\n", "-" * 20, "\n")
-
     print("Ótimo! Temos todas as variáveis necessárias para descobrir o valor total da transição, além dos custos mensais.")
 
     transicao_preco = float(motor_preco_c + cabos_preco_c + postes_preco_c + adicionais_preco_c)
 
     print ("\n", "-" * 20, "\n")
-
     print(f"O preço para trocar o sistema a diesel para o sistema elétrico é de R$ {transicao_preco}")
-
     print ("\n", "-" * 20, "\n")
-
     print(f"Um motor a diesel atualmente gera despesas de R$ {valor_mensal_diesel_f}")
-
     print ("\n", "-" * 20, "\n")
-
     print(f"Um motor elétrico de mesma potência, operando o mesmo numero de horas, irá gerar despesas de R$ {total_eel_f}")
-
     print ("\n", "-" * 20, "\n")
 
     dif_mensal = (valor_mensal_diesel - total_eel)
@@ -135,9 +126,7 @@ def custos_totais():
     dif_percentual = ((total_eel)-(valor_mensal_diesel))/(valor_mensal_diesel)*100
     dif_percentual_f = "{:.2f}".format(dif_percentual)
     print(f"A economia do motor diesel é de R$ {dif_mensal_f} por mês, uma diferença de {dif_percentual_f}%.")
-
     print ("\n", "-" * 20, "\n")
-
     sys.exit("Cálculos feitos! Encerrando aplicação.")
 
 
